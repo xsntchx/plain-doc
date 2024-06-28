@@ -8,11 +8,7 @@ hint info example
 hint warning example
 {% endhint %}
 
-link example user
-
-## &#x20;<a href="#user" id="user"></a>
-
-## &#x20;<a href="#user" id="user"></a>
+link example [tag](./#tag)
 
 ## Pet
 

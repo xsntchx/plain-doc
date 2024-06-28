@@ -2,9 +2,7 @@
 description: gitbook page description
 ---
 
-# Page
-
-
+# Petstore
 
 {% hint style="info" %}
 hint info example
@@ -14,15 +12,7 @@ hint info example
 hint warning example
 {% endhint %}
 
-link example [user](./#tag)
-
-{% content-ref url="./" %}
-[.](./)
-{% endcontent-ref %}
-
-## &#x20;<a href="#user" id="user"></a>
-
-## &#x20;<a href="#user" id="user"></a>
+link example [user](./#user-2)
 
 ## Pet
 
