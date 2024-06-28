@@ -14,7 +14,7 @@ hint info example
 hint warning example
 {% endhint %}
 
-link example [user](./#user-2)
+link example [user](./#tag)
 
 {% content-ref url="./" %}
 [.](./)
