@@ -8,7 +8,7 @@ hint info example
 hint warning example
 {% endhint %}
 
-link example [tag](./#tag)
+link example [tag](petshop.md#tag)
 
 ## Pet
 
