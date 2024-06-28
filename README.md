@@ -12,6 +12,8 @@ Petstore
 |----|------|
 | 1  | Pet1 |
 | 2  | Pet2 |
+| 3  | Pet3 |
+| 4  | Pet4 |
 
 ## Category
 
@@ -19,6 +21,7 @@ Petstore
 |----|-----------|
 | 1  | Category1 |
 | 2  | Category2 |
+| 3  | Category3 |
 
 ## Tag
 
@@ -26,6 +29,7 @@ Petstore
 |----|------|
 | 1  | Tag1 |
 | 2  | Tag2 |
+| 3  | Tag3 |
 
 ##  User
 
@@ -33,3 +37,6 @@ Petstore
 |----|----------|
 | 1  | User1    |
 | 2  | User2    |
+| 3  | User3    |
+| 4  | User4    |
+| 5  | User5    |
