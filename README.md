@@ -16,6 +16,10 @@ link example [user](./#user)
 
 ## Pet
 
+{% swagger src=".gitbook/assets/openapi04.yaml" path="/api/user" method="get" %}
+[openapi04.yaml](.gitbook/assets/openapi04.yaml)
+{% endswagger %}
+
 | id | name |
 | -- | ---- |
 | 1  | Pet1 |
