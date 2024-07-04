@@ -2,7 +2,7 @@
 description: gitbook page description
 ---
 
-# Page
+# TopPage
 
 {% hint style="info" %}
 hint info example
@@ -14,11 +14,11 @@ hint warning example
 
 link example [user](./#user)
 
-## Pet
-
 {% swagger src=".gitbook/assets/openapi04.yaml" path="/api/user" method="get" %}
 [openapi04.yaml](.gitbook/assets/openapi04.yaml)
 {% endswagger %}
+
+## Pet
 
 | id | name |
 | -- | ---- |
