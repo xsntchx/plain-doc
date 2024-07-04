@@ -10,7 +10,8 @@ info:
     url: http://example.com/bar
   version: 0.0.1-SNAPSHOT
 servers:
-- url: http://example.com
+- url: http://example.com/annotation1
+- url: http://example.com/annotation2
 x-codeSamples: false
 paths:
   /api/user:
@@ -129,7 +130,7 @@ components:
           format: int32
           description: Image width (px)
           type: integer
-          example: 120
+          example: 60
     Secret:
       description: Description of Secret class
       type: string
