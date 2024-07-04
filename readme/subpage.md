@@ -1,23 +1,8 @@
-# SubPage
+---
+description: page description subpage
+---
 
-## SubPage
+# 🫐 Subpage
 
-### H1
+sub page paragraph
 
-#### H2
-
-**H3**
-
-**H4**
-
-**H5**
-
-\####### H6
-
-***
-
-## SecondTitle
-
-### H1
-
-***
