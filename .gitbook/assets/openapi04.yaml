@@ -129,7 +129,7 @@ components:
           format: int32
           description: Image width (px)
           type: integer
-          example: 60
+          example: 120
     Secret:
       description: Description of Secret class
       type: string
