@@ -10,8 +10,7 @@ info:
     url: http://example.com/bar
   version: 0.0.1-SNAPSHOT
 servers:
-- url: http://example.com/annotation1
-- url: http://example.com/annotation2
+- url: http://example.com
 x-codeSamples: false
 paths:
   /api/user:
