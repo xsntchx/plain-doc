@@ -14,21 +14,14 @@
         * [🦊 Page 3](readme/page/page-1/page-2/page-3/README.md)
           * [🐻 Page 4](readme/page/page-1/page-2/page-3/page-4/README.md)
             * [🐼 Page 5](readme/page/page-1/page-2/page-3/page-4/page-5.md)
-
-## Group 2
-
-* [Page 7](group-2/page-7.md)
+* [Page 12](page-12.md)
 
 ## Group 3
 
 * [Page 8](group-3/page-8.md)
 
-## Copy of Group 3
+## 🍏 apple <a href="#green-apple" id="green-apple"></a>
 
-* [Page 8](copy-of-group-3/page-8.md)
-* [Page 9](copy-of-group-3/page-9.md)
-* [Page 10](copy-of-group-3/page-10.md)
-
-## Group 4
-
-* [Page 11](group-4/page-11.md)
+* [Page 8](green-apple/page-8.md)
+* [Page 9](green-apple/page-9.md)
+* [Page 10](green-apple/page-10.md)
