@@ -12,10 +12,10 @@ hint info example
 hint warning example
 {% endhint %}
 
-link example [Category](<README (1).md#category>)
+link example [Category](./#category)
 
-{% swagger src=".gitbook/assets/openapi04.yaml" path="/api/user" method="get" %}
-[openapi04.yaml](.gitbook/assets/openapi04.yaml)
+{% swagger src="../.gitbook/assets/openapi04.yaml" path="/api/user" method="get" %}
+[openapi04.yaml](../.gitbook/assets/openapi04.yaml)
 {% endswagger %}
 
 ## Pet
