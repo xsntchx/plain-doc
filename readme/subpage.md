@@ -2,7 +2,7 @@
 description: page description subpage
 ---
 
-# 🫐 Subpage
+# 🐱 Subpage
 
 sub page paragraph
 
@@ -11,8 +11,6 @@ link example [H2](subpage.md#h2)
 ## H1
 
 example
-
-
 
 ### H2
 
