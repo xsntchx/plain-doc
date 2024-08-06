@@ -8,3 +8,11 @@
         * [🦊 Page 3](readme/page/page-1/page-2/page-3/README.md)
           * [🐻 Page 4](readme/page/page-1/page-2/page-3/page-4/README.md)
             * [🐼 Page 5](readme/page/page-1/page-2/page-3/page-4/page-5.md)
+
+## Group 1
+
+* [Page 6](group-1/page-6.md)
+
+## Group 2
+
+* [Page 7](group-2/page-7.md)
