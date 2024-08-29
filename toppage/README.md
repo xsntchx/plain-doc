@@ -14,8 +14,10 @@ hint warning example
 
 link example [Category](./#category)
 
-{% swagger src="../.gitbook/assets/openapi04.yaml" path="/api/user" method="get" %}
-[openapi04.yaml](../.gitbook/assets/openapi04.yaml)
+
+
+{% swagger src="../.gitbook/assets/openapi06.yaml" path="/api/user" method="get" %}
+[openapi06.yaml](../.gitbook/assets/openapi06.yaml)
 {% endswagger %}
 
 ## Pet

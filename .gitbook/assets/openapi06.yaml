@@ -1,0 +1,192 @@
+openapi: 3.0.3
+info:
+  title: FooBarBaz
+  contact:
+    name: foo
+    url: http://example.com/foo
+    email: foo@example.com
+  license:
+    name: bar
+    url: http://example.com/bar
+  version: 0.0.1-SNAPSHOT
+servers:
+- url: http://example.com/v1
+- url: http://example.com/v2
+x-codeSamples: false
+paths:
+  /api/user:
+    get:
+      summary: Get user information
+      description: Get user information with the specified id
+      parameters:
+      - name: id
+        in: query
+        description: ID of the user
+        required: true
+        schema:
+          format: int64
+          type: integer
+          nullable: false
+        example: 12345
+      - name: x-token
+        in: header
+        description: Token
+        required: true
+        schema:
+          type: string
+          nullable: false
+        example: qwerty
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Image'
+        "500":
+          description: Internal Server Error
+    post:
+      summary: Register user
+      description: Register user information
+      parameters:
+      - name: x-token
+        in: header
+        description: Token
+        required: true
+        schema:
+          type: string
+        example: qwerty
+      requestBody:
+        description: User data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "500":
+          description: Internal Server Error
+components:
+  schemas:
+    FixedMapStringInteger:
+      title: "Title of Fixed Map<String, Integer>"
+      description: "Description of Fixed Map<String, Integer>"
+      type: object
+      properties:
+        edge:
+          description: Edge
+          type: number
+          example: 5.21
+        chrome:
+          description: Chrome
+          type: number
+          example: 65.12
+        safari:
+          description: Safari
+          type: number
+          example: 18.17
+    FixedMapStringList:
+      title: "Title of Fixed Map<String, List>"
+      description: "Description of Fixed Map<String, List>"
+      type: object
+      properties:
+        foo:
+          description: Description of array
+          type: array
+          items:
+            type: string
+          example:
+          - A
+          - B
+        bar:
+          description: Description of array
+          type: array
+          items:
+            type: string
+          example:
+          - C
+          - D
+    Image:
+      description: Image class
+      required:
+      - url
+      type: object
+      properties:
+        url:
+          description: Url
+          type: string
+          example: https://example.com/example.png
+        height:
+          title: "高さを表す integer (int32)"
+          format: int32
+          description: Image height (px)
+          type: integer
+          example: 80
+        width:
+          format: int32
+          description: Image width (px)
+          type: integer
+          example: 60
+    Secret:
+      description: Description of Secret class
+      type: string
+      example: '!#$%&'
+    User:
+      description: User's information
+      required:
+      - id
+      - name
+      - passphrase
+      type: object
+      properties:
+        id:
+          format: int64
+          description: Id
+          type: integer
+          example: 123
+        name:
+          description: Name
+          type: string
+          example: John Due
+        picture:
+          $ref: '#/components/schemas/Image'
+        userType:
+          $ref: '#/components/schemas/UserType'
+        passphrase:
+          $ref: '#/components/schemas/Secret'
+        nickname:
+          description: Nickname
+          type: array
+          items:
+            type: string
+          example:
+          - foo
+          - bar
+          - baz
+        customObjects:
+          description: Custom Objects
+          type: object
+          additionalProperties: {}
+          nullable: true
+          readOnly: true
+        fixedMapObjects:
+          $ref: '#/components/schemas/FixedMapStringList'
+        customIntegers:
+          description: Custom Integers
+          type: object
+          additionalProperties:
+            format: int32
+            type: integer
+        fixeMapIntegers:
+          $ref: '#/components/schemas/FixedMapStringInteger'
+    UserType:
+      description: Description of User class
+      enum:
+      - NORMAL
+      - VIP
+      type: string
