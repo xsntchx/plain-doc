@@ -20,6 +20,10 @@ link example [Category](./#category)
 [openapi06.yaml](../.gitbook/assets/openapi06.yaml)
 {% endswagger %}
 
+{% swagger src="../.gitbook/assets/openapi05 (1).yaml" path="/api/user" method="get" %}
+[openapi05 (1).yaml](<../.gitbook/assets/openapi05 (1).yaml>)
+{% endswagger %}
+
 ## Pet
 
 | id | name |
