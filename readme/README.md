@@ -16,12 +16,16 @@ link example [Category](./#category)
 
 
 
-{% swagger src="../.gitbook/assets/openapi06.yaml" path="/api/user" method="get" %}
-[openapi06.yaml](../.gitbook/assets/openapi06.yaml)
+{% swagger src="../.gitbook/assets/openapi06 (1).yaml" path="/api/user" method="get" %}
+[openapi06 (1).yaml](<../.gitbook/assets/openapi06 (1).yaml>)
 {% endswagger %}
 
 {% swagger src="../.gitbook/assets/openapi05 (1).yaml" path="/api/user" method="get" %}
 [openapi05 (1).yaml](<../.gitbook/assets/openapi05 (1).yaml>)
+{% endswagger %}
+
+{% swagger src="../.gitbook/assets/openapi06.yaml" path="/api/user" method="get" %}
+[openapi06.yaml](../.gitbook/assets/openapi06.yaml)
 {% endswagger %}
 
 ## Pet

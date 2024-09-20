@@ -122,9 +122,11 @@ components:
           type: string
           example: https://example.com/example.png
         height:
-          title: "高さを表す integer (int32)"
           format: int32
-          description: Image height (px)
+          description: |
+            1st Line 
+            2nd Line 
+            3rd Line
           type: integer
           example: 80
         width:
