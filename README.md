@@ -8,7 +8,7 @@ description: gitbook page description
 hint warning example
 {% endhint %}
 
-{% swagger src=".gitbook/assets/openapi09.yaml" path="/api/user" method="get" %}
-[openapi09.yaml](.gitbook/assets/openapi09.yaml)
+{% swagger src=".gitbook/assets/openapi10.yaml" path="/api/user" method="get" %}
+[openapi10.yaml](.gitbook/assets/openapi10.yaml)
 {% endswagger %}
 
