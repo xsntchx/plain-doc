@@ -8,11 +8,11 @@ description: gitbook page description
 hint warning example
 {% endhint %}
 
-{% swagger src=".gitbook/assets/openapi11.yaml" path="/api/user" method="get" %}
-[openapi11.yaml](.gitbook/assets/openapi11.yaml)
+{% swagger src=".gitbook/assets/openapi12.yaml" path="/api/user" method="get" %}
+[openapi12.yaml](.gitbook/assets/openapi12.yaml)
 {% endswagger %}
 
-{% swagger src=".gitbook/assets/openapi11.yaml" path="/api/user" method="post" %}
-[openapi11.yaml](.gitbook/assets/openapi11.yaml)
+{% swagger src=".gitbook/assets/openapi12.yaml" path="/api/user" method="post" %}
+[openapi12.yaml](.gitbook/assets/openapi12.yaml)
 {% endswagger %}
 
