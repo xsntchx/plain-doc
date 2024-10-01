@@ -34,13 +34,3 @@ link example [tag](petshop.md#tag)
 | 1  | Tag1 |
 | 2  | Tag2 |
 | 3  | Tag3 |
-
-## User
-
-| id | username |
-| -- | -------- |
-| 1  | User1    |
-| 2  | User2    |
-| 3  | User3    |
-| 4  | User4    |
-| 5  | User5    |
