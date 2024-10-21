@@ -1,0 +1,371 @@
+---
+openapi: 3.0.3
+info:
+  title: FooBarBaz
+  contact:
+    name: foo
+    url: http://example.com/foo
+    email: foo@example.com
+  license:
+    name: bar
+    url: http://example.com/bar
+  version: 0.0.1-SNAPSHOT
+servers:
+- url: http://example.com/annotation1
+- url: http://example.com/annotation2
+paths:
+  /api/user:
+    get:
+      summary: Get user information
+      description: Get user information with the specified id
+      parameters:
+      - name: id
+        in: query
+        description: ID of the user
+        required: true
+        schema:
+          format: int64
+          type: integer
+          nullable: false
+        example: 123
+      - name: x-token
+        in: header
+        description: Token
+        required: true
+        schema:
+          type: string
+          nullable: false
+        example: qwerty
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "500":
+          description: Internal Server Error
+    post:
+      summary: Register user
+      description: Register user information
+      parameters:
+      - name: x-token
+        in: header
+        description: Token
+        required: true
+        schema:
+          type: string
+        example: qwerty
+      requestBody:
+        description: User data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "500":
+          description: Internal Server Error
+components:
+  schemas:
+    FixedMapStringInteger:
+      title: "Title of Fixed Map<String, Integer>"
+      description: "Description of Fixed Map<String, Integer>"
+      type: object
+      properties:
+        edge:
+          description: Edge
+          type: number
+          example: 5.21
+        chrome:
+          description: Chrome
+          type: number
+          example: 65.12
+        safari:
+          description: Safari
+          type: number
+          example: 18.17
+    FixedMapStringList:
+      title: "Title of Fixed Map<String, List>"
+      description: "Description of Fixed Map<String, List>"
+      type: object
+      properties:
+        foo:
+          description: Description of array
+          type: array
+          items:
+            type: string
+          example:
+          - A
+          - B
+        bar:
+          description: Description of array
+          type: array
+          items:
+            type: string
+          example:
+          - C
+          - D
+    PredefinedMapStringInteger:
+      description: predefined in yaml
+      type: object
+      additionalProperties:
+        format: int32
+        type: integer
+      example:
+        PlanA: 100
+        PlanB: 200
+    Computer:
+      description: コンピュータ
+      type: object
+      properties:
+        cpu:
+          description: CPU
+          type: string
+          example: Core i7
+        memory:
+          description: Memory
+          type: string
+          example: DDR
+        storage:
+          description: Storage
+          type: string
+          example: SSD
+    Desktop:
+      description: デスクトップ
+      type: object
+      properties:
+        cpu:
+          description: Desktop向け CPU
+          type: string
+          example: Core i7
+        dummy:
+          title: 偽装フィールド
+          description: OpenAPIドキュメントだけに出力している偽装フィールド
+          type: object
+          example:
+            key1: 12
+            key2: 13
+        memory:
+          description: Memory
+          type: string
+          example: DDR
+        storage:
+          description: Storage
+          type: string
+          example: SSD
+        opticalDrive:
+          allOf:
+          - $ref: '#/components/schemas/OpticalDrive'
+          - description: 光学ドライブ
+        slots:
+          description: 拡張スロット
+          type: object
+          additionalProperties:
+            type: string
+          example:
+            SLOT_01: SSD
+            SLOT_02: Sound
+        count:
+          description: カウント
+          type: object
+          additionalProperties:
+            format: int32
+            type: integer
+          example:
+            A_COUNT: 45
+            B_COUNT: 2
+        pciExpress:
+          description: PCI Express
+          type: object
+          additionalProperties: {}
+          example:
+            OBJECT_01: LAN-CARD
+            OBJECT_02: SOUND-CARD
+        notes:
+          description: 付箋
+          type: array
+          items:
+            type: string
+          example:
+          - CTRL+ALT+DELETE
+          - 16:30 再配達
+    Image:
+      description: Image class
+      required:
+      - url
+      type: object
+      properties:
+        url:
+          description: Url
+          type: string
+          example: https://example.com/example.png
+        height:
+          format: int32
+          description: Image height (px)
+          type: integer
+          example: 80
+        width:
+          format: int32
+          description: Image width (px)
+          type: integer
+          example: 60
+    Laptop:
+      description: ラップトップ
+      type: object
+      properties:
+        cpu:
+          description: Mobile用 CPU
+          type: string
+          example: Core i7
+        memory:
+          description: Memory
+          type: string
+          example: DDR
+        storage:
+          description: Storage
+          type: string
+          example: SSD
+        camera:
+          description: 内蔵カメラ
+          type: string
+    OpticalDrive:
+      description: 機能
+      type: object
+      example:
+        "1": aaa
+        "2": bbb
+    PlanScore:
+      description: Description of PlanScore class.
+      type: object
+      example:
+        PlanA: 1
+        PlanB: 2
+    Portrait:
+      description: Description of Portrait class
+      required:
+      - url
+      type: object
+      properties:
+        width:
+          format: int32
+          description: override width description by portrait
+          type: integer
+          example: 60
+        url:
+          description: Url
+          type: string
+          example: https://example.com/example.png
+        height:
+          format: int32
+          description: Image height (px)
+          type: integer
+          example: 80
+        background:
+          description: Background
+          type: string
+          example: Blue back (SFX)
+    Secret:
+      description: Description of Secret class
+      type: string
+      example: '!#$%&'
+    User:
+      description: User's information
+      required:
+      - id
+      - name
+      - openId
+      - userType
+      - passphrase
+      type: object
+      properties:
+        customIntegers:
+          type: object
+          additionalProperties:
+            format: int64
+            type: integer
+          example:
+            Key1: 65
+            Key2: 66
+        openId:
+          description: Description of User class.
+          type: string
+          properties:
+            openId:
+              type: string
+          example: user-openid-example
+          nullable: false
+        planScore:
+          $ref: '#/components/schemas/PredefinedMapStringInteger'
+        fixeMapIntegers:
+          $ref: '#/components/schemas/FixedMapStringInteger'
+        picture:
+          allOf:
+          - $ref: '#/components/schemas/Portrait'
+          - description: Picture
+            example:
+              url: https://example.com/example.gif
+              width: 30
+        name:
+          description: Name
+          maxLength: 256
+          minLength: 1
+          pattern: "^\\d{3}-\\d{2}-\\d{4}$"
+          type: string
+          example: example name
+        nickname:
+          description: Nickname
+          type: array
+          items:
+            type: string
+          example:
+          - foo
+          - bar
+          - baz
+        passphrase:
+          description: Description of Secret class
+          type: string
+          example: '!#$%&'
+          nullable: false
+        id:
+          format: int64
+          description: Id
+          type: integer
+          example: 123
+        userType:
+          allOf:
+          - $ref: '#/components/schemas/UserType'
+          - nullable: false
+        customObjects:
+          type: object
+          properties:
+            edge:
+              description: Edge
+              type: number
+              example: 5.21
+            chrome:
+              description: Chrome
+              type: number
+              example: 65.12
+            safari:
+              description: Safari
+              type: number
+              example: 18.17
+        fixedMapObjects:
+          $ref: '#/components/schemas/FixedMapStringList'
+        sideBox:
+          $ref: '#/components/schemas/PlanScore'
+    UserType:
+      description: Description of User class
+      enum:
+      - NORMAL
+      - VIP
+      - SUBSCRIBER
+      - DUMMY
+      type: string
+      example: SUBSCRIBER
