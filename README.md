@@ -10,6 +10,6 @@ hint warning example
 
 
 
-{% swagger src=".gitbook/assets/openapi15.yaml" path="/api/user" method="post" %}
-[openapi15.yaml](.gitbook/assets/openapi15.yaml)
+{% swagger src=".gitbook/assets/openapi16.yaml" path="/api/user" method="post" %}
+[openapi16.yaml](.gitbook/assets/openapi16.yaml)
 {% endswagger %}
