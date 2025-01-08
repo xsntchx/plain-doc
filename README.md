@@ -7,7 +7,7 @@ description: gitbook page description
 
 
 {% hint style="info" %}
-サンプル**「テスト」**サンプル
+サンプル **「テスト」** サンプル
 {% endhint %}
 
 {% hint style="warning" %}
