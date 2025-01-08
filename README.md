@@ -4,6 +4,12 @@ description: gitbook page description
 
 # Page
 
+
+
+{% hint style="info" %}
+hint **info** example
+{% endhint %}
+
 {% hint style="warning" %}
 hint warning example
 {% endhint %}
