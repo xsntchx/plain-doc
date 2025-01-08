@@ -14,5 +14,4 @@ value3
 value3
 </td></tr>
 <tr><td>key4</td><td>value4</td></tr>
-<tr><td>foo</td><td>value</td></tr>
 </table>
