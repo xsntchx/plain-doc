@@ -1,0 +1,88 @@
+openapi: 3.0.3
+info:
+  title: FooBarBaz
+  contact:
+    name: foo
+    url: http://example.com/foo
+    email: foo@example.com
+  license:
+    name: bar
+    url: http://example.com/bar
+  version: 0.0.1-SNAPSHOT
+servers:
+- url: http://example.com/annotation1
+- url: http://example.com/annotation2
+paths:
+  /api/user:
+    get:
+      summary: Get user information
+      description: Get user information with the specified id
+      parameters:
+      - name: id
+        in: query
+        description: ID of the user
+        required: true
+        schema:
+          format: int64
+          type: integer
+          nullable: false
+        example: 123
+      - name: x-token
+        in: header
+        description: Token
+        required: true
+        schema:
+          type: string
+          nullable: false
+        example: qwerty
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "500":
+          description: Internal Server Error
+components:
+  schemas:
+    User:
+      description: User's information
+      type: object
+      properties:
+        customIntegers:
+          type: object
+          additionalProperties:
+            format: int64
+            type: integer
+          example:
+            Key1: 65
+            Key2: 66
+        name:
+          description: Name
+          maxLength: 256
+          minLength: 1
+          pattern: \S
+          type: string
+          example: Jane
+        nickname:
+          description: Nickname
+          type: array
+          items:
+            type: string
+          example:
+          - foo
+          - bar
+          - baz
+        passphrase:
+          description: Description of Secret class
+          type: string
+          example: '!#$%&'
+          nullable: false
+        id:
+          format: int64
+          description: Id
+          maximum: 5
+          minimum: 3
+          type: integer
+          example: 234

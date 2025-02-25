@@ -7,15 +7,9 @@ description: gitbook page description
 
 
 {% hint style="info" %}
-サンプル**「テスト」**サンプル
+サンプル
 {% endhint %}
 
-{% hint style="warning" %}
-hint warning example
-{% endhint %}
-
-
-
-{% swagger src=".gitbook/assets/openapi17.yaml" path="/api/user" method="post" %}
-[openapi17.yaml](.gitbook/assets/openapi17.yaml)
-{% endswagger %}
+{% openapi src=".gitbook/assets/openapi18.yaml" path="/api/user" method="get" %}
+[openapi18.yaml](.gitbook/assets/openapi18.yaml)
+{% endopenapi %}
